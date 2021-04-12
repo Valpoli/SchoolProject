@@ -12,9 +12,9 @@ namespace VirtualGlobalCollege.Controllers
 {
     public class StudentsController : Controller
     {
-        private readonly VirtualGlobalCollegeContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public StudentsController(VirtualGlobalCollegeContext context)
+        public StudentsController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -54,7 +54,7 @@ namespace VirtualGlobalCollege.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,LastName,Mail,City,Country")] Student student)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,Poli,Mail,City,Country")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace VirtualGlobalCollege.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,LastName,Mail,City,Country")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,Poli,Mail,City,Country")] Student student)
         {
             if (id != student.Id)
             {
