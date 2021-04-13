@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>aspnet-VirtualGlobalCollege-C6CD862D-8D58-4857-AE9D-1208438FA32D</UserSecretsId>
+    <UserSecretsId>aspnet-VirtualGlobalCollege-8FB2C234-42E6-4A25-AAAC-F1CE8F4CB116</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

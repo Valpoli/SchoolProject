@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-VirtualGlobalCollege-C6CD862D-8D58-4857-AE9D-1208438FA32D")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-VirtualGlobalCollege-8FB2C234-42E6-4A25-AAAC-F1CE8F4CB116")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("VirtualGlobalCollege")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -10,7 +10,7 @@ using VirtualGlobalCollege.Data;
 namespace VirtualGlobalCollege.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210412140714_InitialCreate")]
+    [Migration("20210412150206_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -234,10 +234,10 @@ namespace VirtualGlobalCollege.Data.Migrations
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Mail")
+                    b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")

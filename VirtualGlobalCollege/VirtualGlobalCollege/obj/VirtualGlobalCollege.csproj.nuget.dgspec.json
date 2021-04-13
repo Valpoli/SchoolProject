@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\valpo\\OOP12-04\\VirtualGlobalCollege\\VirtualGlobalCollege\\VirtualGlobalCollege.csproj": {}
+    "C:\\Users\\valpo\\OOP12043\\VirtualGlobalCollege\\VirtualGlobalCollege\\VirtualGlobalCollege.csproj": {}
   },
   "projects": {
-    "C:\\Users\\valpo\\OOP12-04\\VirtualGlobalCollege\\VirtualGlobalCollege\\VirtualGlobalCollege.csproj": {
+    "C:\\Users\\valpo\\OOP12043\\VirtualGlobalCollege\\VirtualGlobalCollege\\VirtualGlobalCollege.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\valpo\\OOP12-04\\VirtualGlobalCollege\\VirtualGlobalCollege\\VirtualGlobalCollege.csproj",
+        "projectUniqueName": "C:\\Users\\valpo\\OOP12043\\VirtualGlobalCollege\\VirtualGlobalCollege\\VirtualGlobalCollege.csproj",
         "projectName": "VirtualGlobalCollege",
-        "projectPath": "C:\\Users\\valpo\\OOP12-04\\VirtualGlobalCollege\\VirtualGlobalCollege\\VirtualGlobalCollege.csproj",
+        "projectPath": "C:\\Users\\valpo\\OOP12043\\VirtualGlobalCollege\\VirtualGlobalCollege\\VirtualGlobalCollege.csproj",
         "packagesPath": "C:\\Users\\valpo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\valpo\\OOP12-04\\VirtualGlobalCollege\\VirtualGlobalCollege\\obj\\",
+        "outputPath": "C:\\Users\\valpo\\OOP12043\\VirtualGlobalCollege\\VirtualGlobalCollege\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
