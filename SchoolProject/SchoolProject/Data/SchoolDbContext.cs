@@ -12,5 +12,12 @@ namespace SchoolProject.Data
         }
 
         public DbSet<Student> Student { get; set; }
+
+
+        public DbSet<Event> Events { get; set; }
+
+
     }
+
+    
 }
