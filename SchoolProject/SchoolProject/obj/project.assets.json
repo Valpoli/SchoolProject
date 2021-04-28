@@ -7256,19 +7256,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\evan\\.nuget\\packages\\": {}
+    "C:\\Users\\valpo\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\evan\\OOP\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
+      "projectUniqueName": "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
       "projectName": "SchoolProject",
-      "projectPath": "C:\\Users\\evan\\OOP\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
-      "packagesPath": "C:\\Users\\evan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\evan\\OOP\\SchoolProject\\SchoolProject\\SchoolProject\\obj\\",
+      "projectPath": "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
+      "packagesPath": "C:\\Users\\valpo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\evan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\valpo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

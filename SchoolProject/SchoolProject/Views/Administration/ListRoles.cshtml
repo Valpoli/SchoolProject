@@ -21,12 +21,11 @@
                 <h5 class="card-title">@role.Name</h5>
             </div>
             <div class="card-footer">
-                <a class="btn btn-primary" asp-action="EditRole"
-                   asp-controller="Administration"
-                   asp-route-id="@role.Id">
-                    Edit
-                </a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <form asp-action="DeleteRole" asp-route-id="@role.Id" method="post">
+                    <a asp-action="EditRole" asp-controller="Administration"
+                       asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
             </div>
         </div>
     }

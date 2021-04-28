@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using SchoolProject.Models;
 
 namespace SchoolProject
 {
@@ -33,7 +34,7 @@ namespace SchoolProject
             services.AddControllersWithViews();
             services.AddDbContext<SchoolDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("SchoolDbContext")));
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<SchoolDbContext>();
         }
 
