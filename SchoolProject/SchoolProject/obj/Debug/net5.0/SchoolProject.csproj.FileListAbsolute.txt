@@ -662,6 +662,11 @@ C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\ref\Scho
 C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.pdb
 C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.genruntimeconfig.cache
 C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\UserGrade.cshtml.g.cs
-C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\Classes.cshtml.g.cs
-C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\Fee.cshtml.g.cs
-C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\Grade.cshtml.g.cs
+C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\UserClasse.cshtml.g.cs
+C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\UserFee.cshtml.g.cs
+C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\EditUserGrade.cshtml.g.cs
+C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\DeleteUserGrade.cshtml.g.cs
+C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\DeleteUserClasse.cshtml.g.cs
+C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\DeleteUserFee.cshtml.g.cs
+C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\EditUserClasse.cshtml.g.cs
+C:\Users\valpo\OOP2404Save\SchoolProject\SchoolProject\obj\Debug\net5.0\Razor\Views\UserInfo\EditUserFee.cshtml.g.cs

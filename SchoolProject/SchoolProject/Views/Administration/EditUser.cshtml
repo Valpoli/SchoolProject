@@ -62,4 +62,79 @@
         </div>
     </div>
 
+    <div class="card">
+        <div class="card-header">
+            <h3>User Grades</h3>
+        </div>
+        <div class="card-body">
+            @if (Model.Grades.Any())
+            {
+                foreach (Grade grade in Model.Grades)
+                {
+                    <h5 class="card-title">@grade.Subject | @grade.Mark</h5>
+                }
+            }
+            else
+            {
+                <h5 class="card-title">None at the moment</h5>
+            }
+        </div>
+        <div class="card-footer">
+            <a asp-controller="UserInfo" asp-action="UserGradeWithID" asp-route-userId="@Model.Id"
+               class="btn btn-primary">
+                Manage Grades
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>User Fees</h3>
+        </div>
+        <div class="card-body">
+            @if (Model.Fees.Any())
+            {
+                foreach (Fee fee in Model.Fees)
+                {
+            <h5 class="card-title">@fee.Title | @fee.Amount | @fee.Paid</h5>
+                }
+            }
+            else
+            {
+                <h5 class="card-title">None at the moment</h5>
+            }
+        </div>
+        <div class="card-footer">
+            <a asp-controller="UserInfo" asp-action="UserFeeWithID" asp-route-userId="@Model.Id"
+               class="btn btn-primary">
+                Manage Fees
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>User Classes</h3>
+        </div>
+        <div class="card-body">
+            @if (Model.Fees.Any())
+            {
+                foreach (Classe classe in Model.Classes)
+                {
+            <h5 class="card-title">@classe.Subject | @classe.Day | @classe.Hour | @classe.Attendance</h5>
+                }
+            }
+            else
+            {
+                <h5 class="card-title">None at the moment</h5>
+            }
+        </div>
+        <div class="card-footer">
+            <a asp-controller="UserInfo" asp-action="UserClasseWithID" asp-route-userId="@Model.Id"
+               class="btn btn-primary">
+                Manage Classes
+            </a>
+        </div>
+    </div>
+
 </form>

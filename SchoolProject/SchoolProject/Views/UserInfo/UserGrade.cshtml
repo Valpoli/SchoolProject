@@ -1,18 +1,15 @@
 ﻿@model SchoolProject.ViewModels.UserGradeViewModel
 
+
 @{
     ViewData["Title"] = "Grades";
 }
 
-<h1>Details</h1>
+<h1>Grades</h1>
 
 <div>
-    <h4>Student</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User.Id)
-        </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.User.UserName)
         </dd>
@@ -20,32 +17,38 @@
 </div>
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                Grade
-            </th>
-            <th></th>
-        </tr>
     </thead>
     <tbody>
         @foreach (Grade item in Model.Grades)
         {
-            <tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            @if (Model.Roles.Contains("Teacher") || Model.Roles.Contains("Administrator"))
+            {
                 <td>
-                    @Html.DisplayFor(modelItem => item.Mark)
+                    <a asp-action="EditUserGrade" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="DeleteUserGrade" asp-route-id="@item.Id">Delete</a>
                 </td>
+            }
             </tr>
         }
     </tbody>
 </table>
 
-<h4>Add new grade</h4>
+@if (Model.Roles.Contains("Teacher") || Model.Roles.Contains("Administrator"))
+{
+    <h4>Add new grade</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="UserGrade">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for ="UserId" value="@Model.User.Id"/>
+            <input type="hidden" asp-for="UserId" value="@Model.User.Id" />
             <div class="form-group">
                 <label asp-for="Mark" class="control-label"></label>
                 <input asp-for="Mark" class="form-control" />
@@ -63,7 +66,4 @@
     </div>
 </div>
 
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+}

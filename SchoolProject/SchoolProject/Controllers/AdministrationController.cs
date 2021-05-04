@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SchoolProject.Data;
 using SchoolProject.Models;
 using SchoolProject.ViewModels;
 using System;
@@ -13,16 +16,18 @@ namespace SchoolProject.Controllers
     {
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly SchoolDbContext _context;
 
-        public AdministrationController(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
+        public AdministrationController(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager, SchoolDbContext context)
         {
             this.roleManager = roleManager;
             this.userManager = userManager;
+            _context = context;
         }
 
         [HttpPost]
-        public async Task<IActionResult>
-    ManageUserRoles(List<UserRolesViewModel> model, string userId)
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> ManageUserRoles(List<UserRolesViewModel> model, string userId)
         {
             var user = await userManager.FindByIdAsync(userId);
 
@@ -54,6 +59,7 @@ namespace SchoolProject.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> ManageUserRoles(string userId)
         {
             ViewBag.userId = userId;
@@ -92,6 +98,7 @@ namespace SchoolProject.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteRole(string id)
         {
             var role = await roleManager.FindByIdAsync(id);
@@ -120,6 +127,7 @@ namespace SchoolProject.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteUser(string id)
         {
             var user = await userManager.FindByIdAsync(id);
@@ -148,6 +156,7 @@ namespace SchoolProject.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Administrator, Teacher")]
         public async Task<IActionResult> EditUser(string id)
         {
             var user = await userManager.FindByIdAsync(id);
@@ -162,9 +171,15 @@ namespace SchoolProject.Controllers
             var userClaims = await userManager.GetClaimsAsync(user);
             // GetRolesAsync returns the list of user Roles
             var userRoles = await userManager.GetRolesAsync(user);
-
+            List<Grade> grades = await _context.Grades.Where(m => m.User == user).ToListAsync();
+            List<Fee> fees = await _context.Fees.Where(m => m.User == user).ToListAsync();
+            List<Classe> classes = await _context.Classes.Where(m => m.User == user).ToListAsync();
             var model = new EditUserViewModel
             {
+                User = user,
+                Grades = grades,
+                Fees = fees,
+                Classes = classes,
                 Id = user.Id,
                 Email = user.Email,
                 UserName = user.UserName,
@@ -176,6 +191,7 @@ namespace SchoolProject.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrator, Teacher")]
         public async Task<IActionResult> EditUser(EditUserViewModel model)
         {
             var user = await userManager.FindByIdAsync(model.Id);
@@ -207,6 +223,7 @@ namespace SchoolProject.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Administrator, Teacher")]
         public IActionResult ListUsers()
         {
             var users = userManager.Users;
@@ -215,12 +232,14 @@ namespace SchoolProject.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public IActionResult CreateRole()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
         {
             if (ModelState.IsValid)
@@ -249,6 +268,7 @@ namespace SchoolProject.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public IActionResult ListRoles()
         {
             var roles = roleManager.Roles;
@@ -257,6 +277,7 @@ namespace SchoolProject.Controllers
 
         // Role ID is passed from the URL to the action
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> EditRole(string id)
         {
             // Find the role by Role ID
@@ -291,6 +312,7 @@ namespace SchoolProject.Controllers
 
         // This action responds to HttpPost and receives EditRoleViewModel
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> EditRole(EditRoleViewModel model)
         {
             var role = await roleManager.FindByIdAsync(model.Id);
@@ -321,6 +343,7 @@ namespace SchoolProject.Controllers
             }
         }
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> EditUsersInRole(string roleId)
         {
             ViewBag.roleId = roleId;
@@ -358,6 +381,7 @@ namespace SchoolProject.Controllers
             return View(model);
         }
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> EditUsersInRole(List<UserRoleViewModel> model, string roleId)
         {
             var role = await roleManager.FindByIdAsync(roleId);

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SchoolProject.Models;
 using SchoolProject.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SchoolProject.Controllers
 {

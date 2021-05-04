@@ -1,19 +1,20 @@
 ﻿using SchoolProject.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace SchoolProject.ViewModels
 {
-    public class UserGradeViewModel
+    public class UserClasseViewModel
     {
         public ApplicationUser User { get; set; }
-        public List<Grade> Grades{ get; set; }
+        public List<Classe> Classes { get; set; }
         public string UserId { get; set; }
-        public int Mark { get; set; }
         public string Subject { get; set; }
+        public string Day { get; set; }
+        public int Hour { get; set; }
+        public bool Attendance { get; set; }
         public IList<string> Roles { get; set; }
     }
 }

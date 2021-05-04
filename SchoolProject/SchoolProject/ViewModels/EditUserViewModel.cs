@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolProject.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,6 +9,10 @@ namespace SchoolProject.ViewModels
 {
     public class EditUserViewModel
     {
+        public ApplicationUser User { get; set; }
+        public List<Grade> Grades { get; set; }
+        public List<Fee> Fees { get; set; }
+        public List<Classe> Classes { get; set; }
         public EditUserViewModel()
         {
             Claims = new List<string>();

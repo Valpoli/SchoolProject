@@ -15,6 +15,8 @@ namespace SchoolProject.Data
         public DbSet<Event> Events { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
         public DbSet<Grade> Grades { get; set; }
+        public DbSet<Fee> Fees { get; set; }
+        public DbSet<Classe> Classes { get; set; }
 
 
     }

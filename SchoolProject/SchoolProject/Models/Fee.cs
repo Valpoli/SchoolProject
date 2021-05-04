@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 
 namespace SchoolProject.Models
 {
-    public class Grade
+    public class Fee
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
         [Required]
-        [Range(0, 20)]
-        public int Mark { get; set; }
-        [Required]
         [StringLength(60, MinimumLength = 3)]
-        public string Subject { get; set; }
+        public string Title { get; set; }
+        [Required]
+        [Range(1, 10000)]
+        public int Amount { get; set; }
+        [Required]
+        public bool Paid { get; set; }
+
         public virtual ApplicationUser User { get; set; }
     }
 }
