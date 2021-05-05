@@ -34,6 +34,7 @@ namespace SchoolProject.Data
                     userManager.AddToRoleAsync(user, "Student").Wait();
                     userManager.AddToRoleAsync(user, "Teacher").Wait();
                     userManager.AddToRoleAsync(user, "Administrator").Wait();
+
                 }
             }
             if (userManager.FindByNameAsync("StudentUser@mail.com").Result == null)
@@ -57,11 +58,12 @@ namespace SchoolProject.Data
                 user.Email = "TeacherUser@mail.com";
 
                 IdentityResult result = userManager.CreateAsync
-                (user, "Test_1234").Result;
+                (user, "    Test_1234").Result;
 
                 if (result.Succeeded)
                 {
                     userManager.AddToRoleAsync(user, "Teacher").Wait();
+
                 }
             }
             if (userManager.FindByNameAsync("AdminUser@mail.com").Result == null)
@@ -76,6 +78,7 @@ namespace SchoolProject.Data
                 if (result.Succeeded)
                 {
                     userManager.AddToRoleAsync(user, "Administrator").Wait();
+
                 }
             }
         }
