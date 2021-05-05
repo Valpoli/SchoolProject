@@ -46,7 +46,6 @@ namespace SchoolProject.Controllers
 
             return Ok(@event);
         }
-
         // PUT: api/Events/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEvent([FromRoute] int id, [FromBody] Event @event)

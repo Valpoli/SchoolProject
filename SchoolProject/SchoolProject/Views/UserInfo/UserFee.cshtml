@@ -31,7 +31,7 @@
                     @Html.DisplayFor(modelItem => item.Paid)
                 </td>
                 <td>
-                    @if (Model.Roles.Contains("Teacher") || Model.Roles.Contains("Administrator"))
+                    @if (this.User.IsInRole("Administrator") || this.User.IsInRole("Teacher"))
                     {
                     <td>
                         <a asp-action="EditUserFee" asp-route-id="@item.Id">Edit</a> |
@@ -43,7 +43,7 @@
     </tbody>
 </table>
 
-@if (Model.Roles.Contains("Teacher") || Model.Roles.Contains("Administrator"))
+@if (this.User.IsInRole("Administrator") || this.User.IsInRole("Teacher"))
 {
     <h4>Add new fee</h4>
     <hr />

@@ -1,6 +1,7 @@
 ﻿using SchoolProject.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,6 +15,5 @@ namespace SchoolProject.ViewModels
         public string Title { get; set; }
         public int Amount { get; set; }
         public bool Paid { get; set; }
-        public IList<string> Roles { get; set; }
     }
 }

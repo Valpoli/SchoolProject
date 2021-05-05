@@ -10,10 +10,9 @@ namespace SchoolProject.ViewModels
     public class UserGradeViewModel
     {
         public ApplicationUser User { get; set; }
-        public List<Grade> Grades{ get; set; }
-        public string UserId { get; set; }
+        public List<Grade> Grades { get; set; }
+        public string UserId { get; set; } 
         public int Mark { get; set; }
         public string Subject { get; set; }
-        public IList<string> Roles { get; set; }
     }
 }

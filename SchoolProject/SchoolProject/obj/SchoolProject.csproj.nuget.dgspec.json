@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\SchoolProject.csproj": {}
+    "C:\\Users\\valpo\\OOPgitfinal\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\SchoolProject.csproj": {
+    "C:\\Users\\valpo\\OOPgitfinal\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
+        "projectUniqueName": "C:\\Users\\valpo\\OOPgitfinal\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
         "projectName": "SchoolProject",
-        "projectPath": "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
+        "projectPath": "C:\\Users\\valpo\\OOPgitfinal\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
         "packagesPath": "C:\\Users\\valpo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\obj\\",
+        "outputPath": "C:\\Users\\valpo\\OOPgitfinal\\SchoolProject\\SchoolProject\\SchoolProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -21,49 +21,49 @@
     <tbody>
         @foreach (Grade item in Model.Grades)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mark)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Subject)
-            </td>
-            @if (Model.Roles.Contains("Teacher") || Model.Roles.Contains("Administrator"))
-            {
+            <tr>
                 <td>
-                    <a asp-action="EditUserGrade" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="DeleteUserGrade" asp-route-id="@item.Id">Delete</a>
+                    @Html.DisplayFor(modelItem => item.Mark)
                 </td>
-            }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subject)
+                </td>
+                @if (this.User.IsInRole("Administrator") || this.User.IsInRole("Teacher"))
+                {
+                    <td>
+                        <a asp-action="EditUserGrade" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="DeleteUserGrade" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                }
             </tr>
         }
     </tbody>
 </table>
 
-@if (Model.Roles.Contains("Teacher") || Model.Roles.Contains("Administrator"))
+@if (this.User.IsInRole("Administrator") || this.User.IsInRole("Teacher"))
 {
     <h4>Add new grade</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="UserGrade">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="UserId" value="@Model.User.Id" />
-            <div class="form-group">
-                <label asp-for="Mark" class="control-label"></label>
-                <input asp-for="Mark" class="form-control" />
-                <span asp-validation-for="Mark" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Subject" class="control-label"></label>
-                <input asp-for="Subject" class="form-control" />
-                <span asp-validation-for="Subject" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="UserGrade">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="UserId" value="@Model.User.Id" />
+                <div class="form-group">
+                    <label asp-for="Mark" class="control-label"></label>
+                    <input asp-for="Mark" class="form-control" />
+                    <span asp-validation-for="Mark" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Subject" class="control-label"></label>
+                    <input asp-for="Subject" class="form-control" />
+                    <span asp-validation-for="Subject" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
 }

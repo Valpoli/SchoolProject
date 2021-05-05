@@ -224,10 +224,18 @@ namespace SchoolProject.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Administrator, Teacher")]
-        public IActionResult ListUsers()
+        public async Task<IActionResult> ListUsersAsync()
         {
             var users = userManager.Users;
-            return View(users);
+            List<UserWithRoleViewModel> model = new List<UserWithRoleViewModel>();
+            foreach(ApplicationUser user in users)
+            {
+                UserWithRoleViewModel mod = new UserWithRoleViewModel();
+                mod.Roles = await userManager.GetRolesAsync(user);
+                mod.User = user;
+                model.Add(mod);
+            }
+            return View(model);
         }
 
 

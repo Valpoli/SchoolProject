@@ -93,8 +93,6 @@ namespace SchoolProject.Controllers
             viewModel.User = user;
             List<Grade> grades = await _context.Grades.Where(m => m.User == user).ToListAsync();
             viewModel.Grades = grades;
-            IList<string> userRoles = await _userManager.GetRolesAsync(user);
-            viewModel.Roles = userRoles;
             return viewModel;
 
         }
@@ -149,7 +147,15 @@ namespace SchoolProject.Controllers
                     }
                 }
                 var users = _userManager.Users;
-                return View("~/Views/Administration/ListUsers.cshtml", users);
+                List<UserWithRoleViewModel> model = new List<UserWithRoleViewModel>();
+                foreach (ApplicationUser user in users)
+                {
+                    UserWithRoleViewModel mod = new UserWithRoleViewModel();
+                    mod.Roles = await _userManager.GetRolesAsync(user);
+                    mod.User = user;
+                    model.Add(mod);
+                }
+                return View("~/Views/Administration/ListUsers.cshtml", model);
             }
             return View(grade);
         }
@@ -181,7 +187,15 @@ namespace SchoolProject.Controllers
             _context.Grades.Remove(grade);
             await _context.SaveChangesAsync();
             var users = _userManager.Users;
-            return View("~/Views/Administration/ListUsers.cshtml", users);
+            List<UserWithRoleViewModel> model = new List<UserWithRoleViewModel>();
+            foreach(ApplicationUser user in users)
+            {
+                UserWithRoleViewModel mod = new UserWithRoleViewModel();
+                mod.Roles = await _userManager.GetRolesAsync(user);
+                mod.User = user;
+                model.Add(mod);
+            }
+            return View("~/Views/Administration/ListUsers.cshtml", model);
         }
 
 
@@ -253,8 +267,6 @@ namespace SchoolProject.Controllers
             viewModel.User = user;
             List<Fee> fees = await _context.Fees.Where(m => m.User == user).ToListAsync();
             viewModel.Fees = fees;
-            IList<string> userRoles = await _userManager.GetRolesAsync(user);
-            viewModel.Roles = userRoles;
             return viewModel;
 
         }
@@ -309,7 +321,15 @@ namespace SchoolProject.Controllers
                     }
                 }
                 var users = _userManager.Users;
-                return View("~/Views/Administration/ListUsers.cshtml", users);
+                List<UserWithRoleViewModel> model = new List<UserWithRoleViewModel>();
+                foreach (ApplicationUser user in users)
+                {
+                    UserWithRoleViewModel mod = new UserWithRoleViewModel();
+                    mod.Roles = await _userManager.GetRolesAsync(user);
+                    mod.User = user;
+                    model.Add(mod);
+                }
+                return View("~/Views/Administration/ListUsers.cshtml", model);
             }
             return View(fee);
         }
@@ -341,7 +361,15 @@ namespace SchoolProject.Controllers
             _context.Fees.Remove(fee);
             await _context.SaveChangesAsync();
             var users = _userManager.Users;
-            return View("~/Views/Administration/ListUsers.cshtml", users);
+            List<UserWithRoleViewModel> model = new List<UserWithRoleViewModel>();
+            foreach (ApplicationUser user in users)
+            {
+                UserWithRoleViewModel mod = new UserWithRoleViewModel();
+                mod.Roles = await _userManager.GetRolesAsync(user);
+                mod.User = user;
+                model.Add(mod);
+            }
+            return View("~/Views/Administration/ListUsers.cshtml", model);
         }
 
 
@@ -415,8 +443,6 @@ namespace SchoolProject.Controllers
             viewModel.User = user;
             List<Classe> classes = await _context.Classes.Where(m => m.User == user).ToListAsync();
             viewModel.Classes = classes;
-            IList<string> userRoles = await _userManager.GetRolesAsync(user);
-            viewModel.Roles = userRoles;
             return viewModel;
 
         }
@@ -471,7 +497,15 @@ namespace SchoolProject.Controllers
                     }
                 }
                 var users = _userManager.Users;
-                return View("~/Views/Administration/ListUsers.cshtml", users);
+                List<UserWithRoleViewModel> model = new List<UserWithRoleViewModel>();
+                foreach (ApplicationUser user in users)
+                {
+                    UserWithRoleViewModel mod = new UserWithRoleViewModel();
+                    mod.Roles = await _userManager.GetRolesAsync(user);
+                    mod.User = user;
+                    model.Add(mod);
+                }
+                return View("~/Views/Administration/ListUsers.cshtml", model);
             }
             return View(classe);
         }
@@ -502,7 +536,15 @@ namespace SchoolProject.Controllers
             _context.Classes.Remove(classe);
             await _context.SaveChangesAsync();
             var users = _userManager.Users;
-            return View("~/Views/Administration/ListUsers.cshtml", users);
+            List<UserWithRoleViewModel> model = new List<UserWithRoleViewModel>();
+            foreach (ApplicationUser user in users)
+            {
+                UserWithRoleViewModel mod = new UserWithRoleViewModel();
+                mod.Roles = await _userManager.GetRolesAsync(user);
+                mod.User = user;
+                model.Add(mod);
+            }
+            return View("~/Views/Administration/ListUsers.cshtml", model);
         }
 
     }

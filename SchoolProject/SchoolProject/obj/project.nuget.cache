@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A51r7wjAg+ffCDcXlqnAykM8iu9uXLCaw9GW8n9ZtnHj30xRAm2jHh7zfS5Eu6hE1pUL4DrIvlkkFM/u4EIBng==",
+  "dgSpecHash": "r/ZyEBOwrgFA6/QWWUvmriIgR3fSj1sUD0cOjbMK+YxNTD9kroDBDibrk8aTlTt4lLJ0ctEo79EhcToROyKsxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\valpo\\OOP2404Save\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
+  "projectFilePath": "C:\\Users\\valpo\\OOPgitfinal\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\valpo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\valpo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.5\\microsoft.aspnetcore.cryptography.internal.5.0.5.nupkg.sha512",

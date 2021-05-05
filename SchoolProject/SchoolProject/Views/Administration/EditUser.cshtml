@@ -54,12 +54,15 @@
                 <h5 class="card-title">None at the moment</h5>
             }
         </div>
-        <div class="card-footer">
-            <a asp-action="ManageUserRoles" asp-route-userId="@Model.Id"
-               class="btn btn-primary">
-                Manage Roles
-            </a>
-        </div>
+        @if (this.User.IsInRole("Administrator"))
+        {
+            <div class="card-footer">
+                <a asp-action="ManageUserRoles" asp-route-userId="@Model.Id"
+                   class="btn btn-primary">
+                    Manage Roles
+                </a>
+            </div>
+        }
     </div>
 
     <div class="card">

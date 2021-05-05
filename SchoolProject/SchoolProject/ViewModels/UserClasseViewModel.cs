@@ -1,6 +1,7 @@
 ﻿using SchoolProject.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,6 +16,5 @@ namespace SchoolProject.ViewModels
         public string Day { get; set; }
         public int Hour { get; set; }
         public bool Attendance { get; set; }
-        public IList<string> Roles { get; set; }
     }
 }

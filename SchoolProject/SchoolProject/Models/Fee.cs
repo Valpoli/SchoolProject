@@ -18,7 +18,6 @@ namespace SchoolProject.Models
         [Required]
         [Range(1, 10000)]
         public int Amount { get; set; }
-        [Required]
         public bool Paid { get; set; }
 
         public virtual ApplicationUser User { get; set; }
