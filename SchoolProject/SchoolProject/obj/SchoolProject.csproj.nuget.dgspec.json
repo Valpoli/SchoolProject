@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\evan\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj": {}
+    "C:\\Users\\red56\\Documents\\prog irland\\OOP\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\evan\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj": {
+    "C:\\Users\\red56\\Documents\\prog irland\\OOP\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\evan\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
+        "projectUniqueName": "C:\\Users\\red56\\Documents\\prog irland\\OOP\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
         "projectName": "SchoolProject",
-        "projectPath": "C:\\Users\\evan\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
-        "packagesPath": "C:\\Users\\evan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\evan\\SchoolProject\\SchoolProject\\SchoolProject\\obj\\",
+        "projectPath": "C:\\Users\\red56\\Documents\\prog irland\\OOP\\SchoolProject\\SchoolProject\\SchoolProject\\SchoolProject.csproj",
+        "packagesPath": "C:\\Users\\red56\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\red56\\Documents\\prog irland\\OOP\\SchoolProject\\SchoolProject\\SchoolProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\evan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\red56\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

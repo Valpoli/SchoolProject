@@ -35,6 +35,7 @@ namespace SchoolProject.Controllers
         public IActionResult Login()
         {
             return View();
+            //don't forget to put a view
         }
 
         [HttpPost]
